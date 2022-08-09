@@ -2,8 +2,8 @@ require 'json'
 require 'net/http'
 
 class CatFacts
-    def initialize(req)
-      @req = req
+    def initialize(requester)
+      @requester = requester
     end
 
   def provide
@@ -13,7 +13,7 @@ class CatFacts
   private
 
   def get_cat_fact
-    text_response = @req.get(URI("https://catfact.ninja/fact"))
+    text_response = @requester.get(URI("https://catfact.ninja/fact"))
     return JSON.parse(text_response)
   end
 end

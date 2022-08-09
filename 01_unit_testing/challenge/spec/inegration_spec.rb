@@ -28,13 +28,13 @@ RSpec.describe "integration" do
     task_1 = Task.new("Walk the dog")
     task_1.mark_complete
     task_test = TaskFormatter.new(task_1)
-    expect(task_test.format).to eq "- [x] Walk the dog"
+    expect(task_test.format).to eq "[x] Walk the dog"
     end
 
   it "returns incomplete tasks" do
     task_1 = Task.new("Walk the dog")
     task_test = TaskFormatter.new(task_1)
-    expect(task_test.format).to eq "- [ ] Walk the dog"
+    expect(task_test.format).to eq "[ ] Walk the dog"
     end
   end
 end

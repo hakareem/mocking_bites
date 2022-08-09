@@ -5,9 +5,9 @@ class TaskFormatter
 
     def format
     if @task.complete? 
-      return "- [x] #{@task.title}"
+      return "[x] #{@task.title}"
     else
-      return "- [ ] #{@task.title}"
+      return "[ ] #{@task.title}"
     end
   end
 end

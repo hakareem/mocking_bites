@@ -18,7 +18,7 @@ RSpec.describe "doubles" do
     fake_object = double :fake_object
     expect(fake_object).to receive(:speak).with("Jess").and_return("Meow, Jess")
     expect(fake_object.speak("Jess")).to eq "Meow, Jess"
-    expect { fake_object.speak("who") }.to raise_error RSpec::Mocks::MockExpectationError
+    expect { fake_object.speak("ron") }.to raise_error RSpec::Mocks::MockExpectationError
   end
 
   it "sets up doubles that expect to be called" do

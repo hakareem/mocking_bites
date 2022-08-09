@@ -1,5 +1,4 @@
 # File: lib/secret_diary.rb
-
 class SecretDiary
   def initialize(diary) # diary is an instance of Diary
     @diary = diary
